@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revolt-second-life-battery-simulator"
+version = "0.1.0"
+description = "Simulator and dashboard for residential second-life EV battery storage economics."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "plotly>=5.18",
+    "streamlit>=1.58",
+]
+
+[project.scripts]
+revolt-sim = "revolt_simulator.__main__:main"
+
+[tool.setuptools]
+packages = ["revolt_simulator"]
