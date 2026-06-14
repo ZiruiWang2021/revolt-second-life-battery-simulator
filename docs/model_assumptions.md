@@ -79,7 +79,7 @@ Equivalent full cycles are estimated from total energy charged into the battery 
 
 适合使用本模型的场景：
 
-- 面试或 portfolio demo。
+- 项目演示、课程展示或产品初步评估。
 - 比较租房、低收入家庭和备电三类用户的价值差异。
 - 快速测试电价、容量、效率、补贴和安装成本对回本周期的影响。
 - 解释二次利用储能为什么需要同时考虑技术、商业和运营约束。
@@ -94,4 +94,4 @@ Equivalent full cycles are estimated from total energy charged into the battery 
 
 English:
 
-The model is intended for portfolio demos, scenario comparison, and business planning. It is not intended for final equipment sizing, safety certification, warranty pricing, electrochemical lifetime prediction, customer billing guarantees, or formal carbon claims.
+The model is intended for project demos, scenario comparison, early product evaluation, and business planning. It is not intended for final equipment sizing, safety certification, warranty pricing, electrochemical lifetime prediction, customer billing guarantees, or formal carbon claims.

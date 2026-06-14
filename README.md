@@ -8,23 +8,23 @@ GitHub link: `https://github.com/ZiruiWang2021/revolt-second-life-battery-simula
 
 ![Dashboard screenshot](assets/dashboard_screenshot.svg)
 
-## 给 HR 的 30 秒版本 / 30-Second Recruiter Summary
+## 项目概览 / Project Overview
 
-- 做了一个完整可运行的能源系统仿真项目，不只是概念说明。
+- 完整可运行的能源系统仿真项目，不只是概念说明。
 - 把电气工程假设、电价机制、家庭用户场景和商业回本模型连接在一起。
 - 包含 Dashboard、CLI、单元测试、GitHub Actions、架构图、技术博客和供应链/数据管理文档。
 - 覆盖三类用户：租房用户、低收入家庭、备电韧性场景。
-- 中国面试官可以先看中文业务逻辑，技术面试官可以继续看英文代码结构和测试。
+- 中文和英文内容并行，方便不同背景的读者快速理解业务逻辑与技术实现。
 
 English:
 
-- Built a working simulation product for a real second-life battery storage business idea.
+- A runnable energy-system simulation project, not just a concept note.
 - Connects electrical engineering assumptions with tariffs, household economics, and customer segments.
 - Includes a dashboard, CLI, tests, GitHub Actions, architecture diagram, technical blog, and strategy docs.
 - Covers renter, low-income household, and backup-power use cases.
-- Designed to be understandable for non-technical reviewers while still showing real technical depth.
+- Presents the same project context in both Chinese and English.
 
-## 给技术面试官的信号 / Technical Interview Signals
+## 技术亮点 / Technical Highlights
 
 - 模块化 Python 包：`config.py`、`profiles.py`、`simulator.py` 分离配置、数据处理和仿真逻辑。
 - 小时级 dispatch 模型：考虑电池容量、往返效率、SOC 储备、充放电功率、循环寿命、电价和碳强度。
@@ -179,8 +179,8 @@ GitHub Actions:
 
 ## 文档 / Documentation
 
+- `docs/project_overview_zh_en.md`：中英双语项目介绍 / bilingual project overview
 - `docs/technical_blog.md`：配套技术博客 / technical blog
-- `docs/interview_guide_zh_en.md`：中英双语面试讲解稿 / bilingual interview guide
 - `docs/supply_chain_strategy.md`：供应链策略 / supply chain strategy
 - `docs/data_management_strategy.md`：数据管理策略 / data management strategy
 - `docs/model_assumptions.md`：模型假设 / model assumptions
@@ -208,4 +208,4 @@ English:
 - 用线性规划替换启发式 dispatch。
 - 按放电深度、温度和 C-rate 建模电池衰减。
 - 加入二次利用电池供应预测和资产追踪。
-- 部署公开 Streamlit demo，方便面试官直接试用。
+- 部署公开 Streamlit demo，便于直接在线试用。

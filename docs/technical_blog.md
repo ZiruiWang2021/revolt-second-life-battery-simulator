@@ -68,7 +68,7 @@ The model is intentionally transparent. Instead of hiding the logic inside a bla
 - discharge during high-price hours
 - respect battery capacity, power limits, efficiency, and reserve state of charge
 
-这让项目更适合面试展示：HR 可以理解业务价值，技术面试官可以追踪每个 KPI 是怎么计算出来的。
+这种设计让业务价值、工程假设和 KPI 计算路径都可以被直接追踪，也便于后续替换成更复杂的优化模型。
 
 ## Technical Implementation / 技术实现
 
@@ -133,7 +133,7 @@ For a 7-day renter scenario, the simulator produced:
 
 English:
 
-The dashboard turns those outputs into an interview-friendly demo. A user can choose the scenario, adjust capacity and efficiency, change tariff assumptions, upload a household load CSV, and download hourly dispatch results.
+The dashboard turns those outputs into an interactive demo. A user can choose the scenario, adjust capacity and efficiency, change tariff assumptions, upload a household load CSV, and download hourly dispatch results.
 
 ## Limitations / 局限性
 
@@ -164,7 +164,7 @@ English:
 
 The most important lesson was that second-life storage is not just a battery engineering problem. It is a system design problem involving technical constraints, customer constraints, market constraints, and operational constraints.
 
-I also learned that a good engineering portfolio project should have two layers. A recruiter should understand the value in under a minute, while a technical interviewer should be able to inspect the code and see real modelling decisions.
+I also learned that a strong engineering project needs two layers: the value proposition should be understandable quickly, while the implementation should still expose real modelling decisions, test coverage, and limitations.
 
 ## GitHub Link / 项目链接
 
