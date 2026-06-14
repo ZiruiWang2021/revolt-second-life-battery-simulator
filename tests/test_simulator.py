@@ -10,6 +10,16 @@ class SimulatorTests(unittest.TestCase):
         presets = scenario_presets()
         self.assertEqual({"renter", "low_income", "backup"}, set(presets))
 
+    def test_scenario_presets_have_bilingual_labels(self) -> None:
+        presets = scenario_presets()
+
+        self.assertIn("租房", presets["renter"].label)
+        self.assertIn("Renter", presets["renter"].label)
+        self.assertIn("低收入", presets["low_income"].label)
+        self.assertIn("Low-income", presets["low_income"].label)
+        self.assertIn("备电", presets["backup"].label)
+        self.assertIn("Backup", presets["backup"].label)
+
     def test_simulation_summary_reconciles_bill_savings(self) -> None:
         scenario = get_scenario("renter")
         profile = generate_household_profile(days=7, household_type=scenario.household_type)

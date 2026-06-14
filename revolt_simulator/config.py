@@ -77,8 +77,8 @@ def scenario_presets() -> dict[str, ScenarioPreset]:
     return {
         "renter": ScenarioPreset(
             name="renter",
-            label="Renter",
-            audience="Portable or lease-style battery system for apartments and small homes.",
+            label="租房用户 / Renter",
+            audience="面向公寓和小户型的便携式或租赁式电池系统。 / Portable or lease-style battery system for apartments and small homes.",
             household_type="renter",
             battery=BatteryConfig(
                 capacity_kwh=5.0,
@@ -97,8 +97,8 @@ def scenario_presets() -> dict[str, ScenarioPreset]:
         ),
         "low_income": ScenarioPreset(
             name="low_income",
-            label="Low-income household",
-            audience="Incentive-supported system focused on bill savings and peak burden reduction.",
+            label="低收入家庭 / Low-income household",
+            audience="面向电费减负和高峰负担降低的补贴型系统。 / Incentive-supported system focused on bill savings and peak burden reduction.",
             household_type="low_income",
             battery=BatteryConfig(
                 capacity_kwh=9.0,
@@ -118,8 +118,8 @@ def scenario_presets() -> dict[str, ScenarioPreset]:
         ),
         "backup": ScenarioPreset(
             name="backup",
-            label="Backup use case",
-            audience="Larger battery with protected reserve for outage resilience.",
+            label="备电韧性场景 / Backup use case",
+            audience="保留更高 SOC 的大容量系统，用于停电韧性。 / Larger battery with protected reserve for outage resilience.",
             household_type="backup",
             battery=BatteryConfig(
                 capacity_kwh=14.0,

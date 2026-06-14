@@ -11,13 +11,20 @@ from .simulator import simulate_battery_storage
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Run a ReVolt second-life battery simulation.")
-    parser.add_argument("--scenario", choices=["renter", "low_income", "backup"], default="renter")
-    parser.add_argument("--days", type=int, default=14)
-    parser.add_argument("--input-csv", type=Path, default=None)
-    parser.add_argument("--output-csv", type=Path, default=None)
-    parser.add_argument("--capacity-kwh", type=float, default=None)
-    parser.add_argument("--efficiency", type=float, default=None)
+    parser = argparse.ArgumentParser(
+        description="Run a ReVolt second-life battery simulation. / 运行 ReVolt 二次利用电池储能仿真。"
+    )
+    parser.add_argument(
+        "--scenario",
+        choices=["renter", "low_income", "backup"],
+        default="renter",
+        help="Scenario preset: renter, low_income, or backup. / 场景预设：租房、低收入家庭或备电。",
+    )
+    parser.add_argument("--days", type=int, default=14, help="Generated profile length in days. / 生成负荷天数。")
+    parser.add_argument("--input-csv", type=Path, default=None, help="Optional household load CSV. / 可选家庭负荷 CSV。")
+    parser.add_argument("--output-csv", type=Path, default=None, help="Optional hourly result CSV path. / 可选小时级结果 CSV 输出路径。")
+    parser.add_argument("--capacity-kwh", type=float, default=None, help="Override battery capacity in kWh. / 覆盖电池容量。")
+    parser.add_argument("--efficiency", type=float, default=None, help="Override round-trip efficiency. / 覆盖往返效率。")
     args = parser.parse_args(argv)
 
     scenario = get_scenario(args.scenario)
